@@ -1,12 +1,13 @@
+// components/Navbar.tsx
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="border-b">
+    <header className="sticky top-0 z-50 bg-white border-b shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        {/* Logo + Name */}
-        <div className="flex items-center gap-3">
+        {/* Logo + Name clickable */}
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/logo.png"
             alt="Famous Service Logo"
@@ -17,7 +18,7 @@ export default function Navbar() {
           <span className="text-lg font-semibold text-[#8A1538]">
             Famous Service
           </span>
-        </div>
+        </Link>
 
         {/* Navigation */}
         <nav className="flex gap-6 text-sm font-medium">
